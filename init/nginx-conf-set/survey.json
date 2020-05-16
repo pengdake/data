@@ -1,0 +1,77 @@
+{
+  "name": "", 
+  "description": "", 
+  "spec": [
+    {
+      "question_description": "", 
+      "min": 0, 
+      "default": "", 
+      "max": 1024, 
+      "question_name": "Name", 
+      "required": true, 
+      "new_question": true, 
+      "variable": "name", 
+      "choices": "", 
+      "type": "text"
+    }, 
+    {
+      "question_description": "", 
+      "min": 0, 
+      "default": "", 
+      "max": 1024, 
+      "question_name": "Host", 
+      "required": true, 
+      "new_question": true, 
+      "variable": "host", 
+      "choices": "", 
+      "type": "text"
+    }, 
+    {
+      "question_description": "", 
+      "min": 0, 
+      "default": "", 
+      "max": 1024, 
+      "question_name": "Protocol", 
+      "required": true, 
+      "new_question": true, 
+      "variable": "protocol", 
+      "choices": "", 
+      "type": "text"
+    }, 
+    {
+      "question_description": "", 
+      "min": 0, 
+      "default": "", 
+      "max": 1024, 
+      "question_name": "Add", 
+      "required": true, 
+      "new_question": true, 
+      "variable": "add", 
+      "choices": "", 
+      "type": "text"
+    }, 
+    {
+      "question_description": "", 
+      "min": 0, 
+      "default": "", 
+      "max": 1024, 
+      "question_name": "Port", 
+      "required": true, 
+      "new_question": true, 
+      "variable": "port", 
+      "choices": "", 
+      "type": "text"
+    }, 
+    {
+      "question_name": "Path", 
+      "question_description": "", 
+      "required": false, 
+      "type": "text", 
+      "variable": "path", 
+      "min": 0, 
+      "max": 1024, 
+      "default": "", 
+      "choices": ""
+    }
+  ]
+}

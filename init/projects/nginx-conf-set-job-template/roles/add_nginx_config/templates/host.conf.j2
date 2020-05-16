@@ -1,0 +1,5 @@
+upstream {{ name }} {
+        hash $remote_addr consistent;
+        server {{ host }}:{{ port }} max_fails=3 fail_timeout=15s;
+}
+

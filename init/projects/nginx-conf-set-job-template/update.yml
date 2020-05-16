@@ -1,0 +1,15 @@
+---
+- name: Add Nginx Config
+  hosts: k8s-master
+  gather_facts: False
+  roles:
+    - { role: add_nginx_config, 
+        when: add | bool }
+
+- name: Remove Nginx Config
+  hosts: k8s-master
+  gather_facts: False
+  roles:
+    - { role: remove_nginx_config,
+        when: add | bool == False }
+ 

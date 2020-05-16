@@ -1,0 +1,43 @@
+---
+- name: check nginx config dir
+  stat:
+    path: /etc/nginx/vnc
+  register: nginx_config_dir
+
+- name: create nginx config dir if not existed
+  file:
+    path: /etc/nginx/vnc
+    state: directory
+  when: nginx_config_dir.stat.exists == false
+
+- name: add nginx config file
+  template:
+    src: "{{ item }}.conf.j2"
+    dest: "/etc/nginx/vnc/{{ name }}-{{ item }}.conf"
+  with_items:
+    - host
+    - map
+
+- name: check nginx config file
+  command: "nginx -t"
+  ignore_errors: yes
+  register: check_result
+
+- name: rollback nginx config file
+  file:
+    path: /etc/nginx/vnc/{{ name }}-{{ item }}.conf
+    state: absent
+  with_items:
+    - host
+    - map
+  when: check_result.rc != 0
+
+- name: return fail info 
+  fail:
+    msg: "new nginx config named {{ name }} is wrong!"
+  when: check_result.rc != 0
+
+- name: reload nginx
+  command: "nginx -s reload"
+  when: check_result.rc == 0
+

@@ -1,0 +1,12 @@
+---
+- name: remove nginx config file
+  file:
+    path: /etc/nginx/vnc/{{ name }}-{{ item }}.conf
+    state: absent
+  with_items:
+    - host
+    - map
+
+- name: reload nginx
+  command: "nginx -s reload"
+
