@@ -1,0 +1,48 @@
+jsznjc:
+  id: jsznjc
+  image:
+    name: ailab-bkd-course-sc-desktop
+    version: 1.0
+  dataset:
+    -  { name: dataset-bp-human }
+    -  { name: dataset-liner-nerve }
+    -  { name: dataset-sofm }
+jqxxjc:
+  id: jqxxjc
+  image:
+    name: ailab-bkd-course-ml-cpu-desktop
+    version: 1.1
+  dataset:
+    -  { name: dataset-classify }
+    -  { name: dataset-decision }
+    -  { name: dataset-bayes }
+    -  { name: dataset-bp }
+    -  { name: dataset-liner }
+mssbjc:
+  id: mssbjc
+  image:
+    name: ailab-bkd-course-pr-desktop
+    version: 1.4
+  dataset:
+    -  { name: dataset-min-rate }
+    -  { name: dataset-non-param }
+    -  { name: dataset-svm-mode }
+    -  { name: dataset-pca }
+    -  { name: dataset-ear }
+sztxcl:
+  id: sztxcl
+  image:
+    name: ailab-bkd-course-dip-desktop
+    version: 1.3
+  dataset:
+    -  { name: dataset-exchange }
+    -  { name: dataset-histogram }
+    -  { name: dataset-space-smooth }
+    -  { name: dataset-fre-smooth }
+    -  { name: dataset-image-denoise }
+    -  { name: dataset-x-ray }
+    -  { name: dataset-filter-hisogram }
+    -  { name: dataset-expand }
+    -  { name: dataset-image-cut }
+    -  { name: dataset-image-design }
+
