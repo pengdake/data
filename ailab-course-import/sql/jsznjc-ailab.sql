@@ -70,3 +70,11 @@ REPLACE INTO `tb_course_lab_code` (`code_id`, `lab_id`, `code_filepath`, `code_f
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('993', '985', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-bp-human'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('994', '989', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-liner-nerve'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('995', '991', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-sofm'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
+
+REPLACE INTO `tb_course_reference` VALUES ('99990', '人工神经网络导论',  '/download/picture/reference_pic_jqxxjc01.jpg', '吴微', '高教出版社', '2003.7', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99991', '遗传算法',  '/download/picture/reference_pic_jqxxjc02.jpg', '王小平', '西安电子科技大学出版社', '2005.4', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99992', 'Matlab遗传算法工具箱及应用',  '/download/picture/reference_pic_jqxxjc03.jpg', '雷英>杰', '西安电子科技大学出版社', '2005.4', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99993', '智能计算',  '/download/picture/reference_pic_jqxxjc04.jpg', '吴微', '高教出版社', '2009.12', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99994', '人工免疫算法理论及应用',  '/download/picture/reference_pic_jqxxjc05.jpg', '马佳，石刚著', '东北大学出版社', '2014.3', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99995', 'MATLAB工具箱的神经网络理论',  '/download/picture/reference_pic_jqxxjc06.jpg', '周开>利编著', '清华大学出版社', '2008', '999', '2019-05-11 18:00:00', "-1", null, null, '0');
+

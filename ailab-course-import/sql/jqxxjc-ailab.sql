@@ -125,3 +125,10 @@ REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('998', '998', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-bayes'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('999', '999', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-bp'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('1000', '1000', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-liner'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
+
+
+REPLACE INTO `tb_course_reference` VALUES ('99996', '机器学习',  '/download/picture/reference_pic_jqxxjc01.jpg', '周志华', '清华大学出版社', '2016年', '1000', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99997', 'Pattern Recognition and Machine Learning',  '/download/picture/reference_pic_jqxxjc02.jpg', 'Christopher M. Bishop',  '无', '2006 Springer', '1000', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99998', '统计学习方法',  '/download/picture/reference_pic_jqxxjc03.jpg', '李航', '清华大学出版社', '2012年', '1000', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99999', '机器学习',  '/download/picture/reference_pic_jqxxjc04.jpg', 'Peter Flach著，段菲译', '人民邮电出版社', '2016年', '1000', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('100000', '机器学习',  '/download/picture/reference_pic_jqxxjc05.jpg', 'Tom M. Mitchell著，曾华军 张银奎等译', '>机械工业出版社', '2003年', '1000', '2019-05-11 18:00:00', "-1", null, null, '0');

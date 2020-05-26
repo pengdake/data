@@ -3,103 +3,77 @@ REPLACE INTO `tb_course` VALUES ('997', '数字图像处理', '001017', '0', '�
 REPLACE INTO `tb_tag` VALUES ('1000', '人工智能', NULL, '2020-5-16 16:53:24', 1, NULL, NULL, 0, 1);
 REPLACE INTO `tb_course_tag` VALUES ('997', '997', '1000', '2020-5-16 18:12:08', 1, NULL, NULL, 0);
 
-REPLACE INTO `tb_course_chapter` VALUES ('99974', '绪论', '', '1', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99974/1_绪论_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99975', '数字图像基础', '', '2', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99975/2_数字图像基础_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99976', '空间域图像增强', '', '3', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99976/3_空间域图像增强_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99977', '频域图像增强', '', '4', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99977/4_频域图像增强_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99978', '图像复原', '', '5', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99978/5_图像复原_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99979', '彩色图像处理', '', '6', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null , '/download/pdf/99979/6_彩色图像处理_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99980', '图像压缩', '', '7', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null,  '/download/pdf/99980/7_图像压缩_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99981', '形态学图像处理', '', '8', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99981/8_形态学图像处理_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99982', '图像分割', '', '9', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99982/9_图像分割_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99973', '绪论', '', '1', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99973/1_绪论_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99974', '数字图像基础', '', '2', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99974/2_数字图像基础_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99975', '空间域图像增强', '', '3', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99975/3_空间域图像增强_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99976', '频域图像增强', '', '4', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99976/4_频域图像增强_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99977', '图像复原', '', '5', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99977/5_图像复原_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99978', '彩色图像处理', '', '6', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null , '/download/pdf/99978/6_彩色图像处理_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99979', '图像压缩', '', '7', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null,  '/download/pdf/99979/7_图像压缩_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99980', '形态学图像处理', '', '8', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99980/8_形态学图像处理_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99981', '图像分割', '', '9', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99981/9_图像分割_encrypt.pdf');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99868', '数字图像处理的基本概念', '', null, null, '1', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99869', '数字图像处理的发展历史及应用领域', '', null, null, '2', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99870', '数字图像处理的主要研究内容', '', null, null, '3', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99871', '数字图像处理系统的组成部分', '', null, null, '4', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99868', '数字图像处理的基本概念', '', null, null, '1', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99869', '数字图像处理的发展历史及应用领域', '', null, null, '2', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99870', '数字图像处理的主要研究内容', '', null, null, '3', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99871', '数字图像处理系统的组成部分', '', null, null, '4', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99872', '视觉感知要素', '', null, null, '2', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99873', '图像获取方法', '', null, null, '3', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99874', '图像的采样和量化', '', null, null, '4', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99875', '图像像素间的基本关系', '', null, null, '5', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99872', '视觉感知要素', '', null, null, '2', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99873', '图像获取方法', '', null, null, '3', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99874', '图像的采样和量化', '', null, null, '4', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99875', '图像像素间的基本关系', '', null, null, '5', '99974', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99876', '空间域图像增强的概念及目的', '', null, null, '1', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99877', '图像灰度变换', '', null, null, '2', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99878', '图像直方图处理', '', null, null, '3', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99879', '图像的算术运算和逻辑运算', '', null, null, '4', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99880', '空间域滤波基础', '', null, null, '5', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99881', '图像的空间平滑滤波方法', '', null, null, '6', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99882', '图像的空间锐化滤波方法', '', null, null, '7', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99876', '空间域图像增强的概念及目的', '', null, null, '1', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99877', '图像灰度变换', '', null, null, '2', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99878', '图像直方图处理', '', null, null, '3', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99879', '图像的算术运算和逻辑运算', '', null, null, '4', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99880', '空间域滤波基础', '', null, null, '5', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99881', '图像的空间平滑滤波方法', '', null, null, '6', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99882', '图像的空间锐化滤波方法', '', null, null, '7', '99975', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99883', '傅图像的傅里叶变换', '', null, null, '1', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99884', '频域滤波的基本步骤', '', null, null, '2', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99885', '图像的频域平滑滤波方法', '', null, null, '3', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99886', '图像的频域锐化滤波方法', '', null, null, '4', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99883', '傅图像的傅里叶变换', '', null, null, '1', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99884', '频域滤波的基本步骤', '', null, null, '2', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99885', '图像的频域平滑滤波方法', '', null, null, '3', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99886', '图像的频域锐化滤波方法', '', null, null, '4', '99976', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99887', '图像退化/复原的模型', '', null, null, '1', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99888', '噪声模型', '', null, null, '2', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99889', '只存在噪声的空间滤波复原', '', null, null, '3', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99890', '频域滤波消减周期噪声', '', null, null, '4', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99891', '线性、位置不变的退化', '', null, null, '5', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99892', '估计退化函数', '', null, null, '6', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99893', '逆滤波', '', null, null, '7', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99894', '最小均方误差滤波（维纳滤波）', '', null, null, '8', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99895', '约束最小二乘方滤波器', '', null, null, '9', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99896', '几何均值滤波', '', null, null, '10', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99897', '几何变换', '', null, null, '11', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99887', '图像退化/复原的模型', '', null, null, '1', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99888', '噪声模型', '', null, null, '2', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99889', '只存在噪声的空间滤波复原', '', null, null, '3', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99890', '频域滤波消减周期噪声', '', null, null, '4', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99891', '线性、位置不变的退化', '', null, null, '5', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99892', '估计退化函数', '', null, null, '6', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99893', '逆滤波', '', null, null, '7', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99894', '最小均方误差滤波（维纳滤波）', '', null, null, '8', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99895', '约束最小二乘方滤波器', '', null, null, '9', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99896', '几何均值滤波', '', null, null, '10', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99897', '几何变换', '', null, null, '11', '99977', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99898', '彩色基础', '', null, null, '2', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99899', '彩色模型', '', null, null, '3', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99900', '伪彩色处理', '', null, null, '4', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99901', '全彩色图像处理基础', '', null, null, '5', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99902', '彩色变换', '', null, null, '6', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99903', '平滑和尖锐化', '', null, null, '7', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99904', '彩色分割', '', null, null, '8', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99905', '彩色图像的噪声', '', null, null, '9', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99906', '彩色图像压缩', '', null, null, '10', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99898', '彩色基础', '', null, null, '2', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99899', '彩色模型', '', null, null, '3', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99900', '伪彩色处理', '', null, null, '4', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99901', '全彩色图像处理基础', '', null, null, '5', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99902', '彩色变换', '', null, null, '6', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99903', '平滑和尖锐化', '', null, null, '7', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99904', '彩色分割', '', null, null, '8', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99905', '彩色图像的噪声', '', null, null, '9', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99906', '彩色图像压缩', '', null, null, '10', '99978', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99907', '图像压缩基础知识', '', null, null, '3', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99908', '图像压缩模型', '', null, null, '4', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99909', '信息论简介', '', null, null, '5', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99910', '量化', '', null, null, '6', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99911', '预测编码和变换编码', '', null, null, '7', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99907', '图像压缩基础知识', '', null, null, '3', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99908', '图像压缩模型', '', null, null, '4', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99909', '信息论简介', '', null, null, '5', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99910', '量化', '', null, null, '6', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99911', '预测编码和变换编码', '', null, null, '7', '99979', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99912', '形态学图像处理基础知识', '', null, null, '1', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99913', '膨胀与腐蚀', '', null, null, '2', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99914', '开操作与闭操作', '', null, null, '3', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99915', '击中或击不中变换', '', null, null, '4', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99916', '一些基本的形态学算法', '', null, null, '5', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99912', '形态学图像处理基础知识', '', null, null, '1', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99913', '膨胀与腐蚀', '', null, null, '2', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99914', '开操作与闭操作', '', null, null, '3', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99915', '击中或击不中变换', '', null, null, '4', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99916', '一些基本的形态学算法', '', null, null, '5', '99980', '2019-05-11 09:00:00', "-1", null, null, '0');
 
-REPLACE INTO `tb_course_chapter_note` VALUES ('99917', '间断检测', '', null, null, '1', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99918', '边缘连接', '', null, null, '2', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99919', '门限处理', '', null, null, '3', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');
-REPLACE INTO `tb_course_chapter_note` VALUES ('99920', '基于区域的分割', '', null, null, '4', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+REPLACE INTO `tb_course_chapter_note` VALUES ('99917', '间断检测', '', null, null, '1', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99918', '边缘连接', '', null, null, '2', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99919', '门限处理', '', null, null, '3', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_chapter_note` VALUES ('99920', '基于区域的分割', '', null, null, '4', '99981', '2019-05-11 09:00:00', "-1", null, null, '0');
 
 
 
@@ -169,3 +143,10 @@ REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('985', '972', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-expand'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('986', '973', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-image-cut'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
 REPLACE INTO `tb_course_lab_dateset` (`id`, `lab_id`, `dataset_id`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('987', '974', (SELECT dataset_id FROM tb_dataset WHERE is_del = 0 AND dataset_name = 'dataset-image-design'), '2020-05-18 13:41:16', NULL, NULL, NULL, '0');
+
+REPLACE INTO `tb_course_reference` VALUES ('99980', '图像处理和分析教程', '/download/picture/reference_pic_sztxcl01.jpg', '章毓晋', '人民邮电出版社', '2009年', '997', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99981', '数字图像处理学', '/download/picture/reference_pic_sztxcl02.jpg', '阮秋琦',  '电子工业出版社', '2007年', '997', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99982', '数字图像处理', '/download/picture/reference_pic_sztxcl03.jpg', 'Kenneth R. Castleman', '电子工业
+出版社', '2011年', '997', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99983', '数字图像处理', '/download/picture/reference_pic_sztxcl04.jpg', '贾永红', '武汉大学出版社', '2010年', '997', '2019-05-11 18:00:00', "-1", null, null, '0');
+REPLACE INTO `tb_course_reference` VALUES ('99984', '数字图像处理', '/download/picture/reference_pic_sztxcl05.jpg', ' Rafael C. Gonzalez, Richard E. Woods编，阮秋琦等译', '电子工业出版社', '2011年', '997', '2019-05-11 18:00:00', "-1", null, null, '0');
