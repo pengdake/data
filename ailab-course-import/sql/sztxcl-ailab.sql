@@ -3,15 +3,15 @@ REPLACE INTO `tb_course` VALUES ('997', '数字图像处理', '001017', '0', '�
 REPLACE INTO `tb_tag` VALUES ('1000', '人工智能', NULL, '2020-5-16 16:53:24', 1, NULL, NULL, 0, 1);
 REPLACE INTO `tb_course_tag` VALUES ('997', '997', '1000', '2020-5-16 18:12:08', 1, NULL, NULL, 0);
 
-REPLACE INTO `tb_course_chapter` VALUES ('99973', '绪论', '', '1', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99973/1_绪论_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99974', '数字图像基础', '', '2', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99974/2_数字图像基础_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99975', '空间域图像增强', '', '3', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99975/3_空间域图像增强_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99976', '频域图像增强', '', '4', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99976/4_频域图像增强_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99977', '图像复原', '', '5', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99977/5_图像复原_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99978', '彩色图像处理', '', '6', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null , '/download/pdf/99978/6_彩色图像处理_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99979', '图像压缩', '', '7', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null,  '/download/pdf/99979/7_图像压缩_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99980', '形态学图像处理', '', '8', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99980/8_形态学图像处理_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99981', '图像分割', '', '9', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99981/9_图像分割_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99973', '绪论', '', '1', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/1_绪论_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99974', '数字图像基础', '', '2', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/2_数字图像基础_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99975', '空间域图像增强', '', '3', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/3_空间域图像增强_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99976', '频域图像增强', '', '4', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/4_频域图像增强_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99977', '图像复原', '', '5', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/5_图像复原_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99978', '彩色图像处理', '', '6', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null , '/download/pdf/997/6_彩色图像处理_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99979', '图像压缩', '', '7', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null,  '/download/pdf/997/7_图像压缩_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99980', '形态学图像处理', '', '8', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/8_形态学图像处理_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99981', '图像分割', '', '9', '997', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/997/9_图像分割_encrypt.pdf');
 
 REPLACE INTO `tb_course_chapter_note` VALUES ('99868', '数字图像处理的基本概念', '', null, null, '1', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');
 REPLACE INTO `tb_course_chapter_note` VALUES ('99869', '数字图像处理的发展历史及应用领域', '', null, null, '2', '99973', '2019-05-11 09:00:00', "-1", null, null, '0');

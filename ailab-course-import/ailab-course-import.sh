@@ -51,7 +51,7 @@ for APP in ${__};do
     IMV=${APP}_image_version
     IMF_C="${!IMN}_${!IMV}.tar"
     IMT_C="${!IMN}:${!IMV}"
-    IMG_UUID="$HARBOR_URL/${AILAB_CUSTOM_IMAGES_PROJECT}/${IMT_C}"
+    IMG="$HARBOR_URL/${AILAB_CUSTOM_IMAGES_PROJECT}/${IMT_C}"
 
     APP_FULLPATH="$(pwd)/lesson/${!ID}"
     echo "Importing: $n $APP..."
@@ -71,9 +71,9 @@ for APP in ${__};do
 
     echo "Uploading image..."
     docker load -i ${APP_FULLPATH}/image/${IMF_C}
-    docker tag ${IMT_C} ${IMG_UUID}
-    docker push ${IMG_UUID}
-    docker rmi ${IMG_UUID} ${IMT_C}
+    docker tag ${IMT_C} ${IMG}
+    docker push ${IMG}
+    docker rmi ${IMG} ${IMT_C}
 
     echo "Uploading other resource..."
     kubectl cp $APP_FULLPATH/lab ailab-mgmt/$AILAB_POD:/opt/ailab/files
@@ -84,7 +84,7 @@ for APP in ${__};do
     echo "Init lesson info by sql..."
     cp $(pwd)/sql/${!ID}-ailab.sql /tmp/${!ID}-ailab.sql
     sed -i -r \
-        -e "s|__IMG_UUID__|${IMG_UUID}|" \
+        -e "s|__IMG_UUID__|${IMT_C}|" \
         "/tmp/${!ID}-ailab.sql"
 
     cat >> /tmp/image.sql << EOF

@@ -3,15 +3,15 @@ REPLACE INTO `tb_course` VALUES ('998', '模式识别基础', '001010', '0', '�
 REPLACE INTO `tb_tag` VALUES ('1000', '人工智能', NULL, '2020-5-16 16:53:24', 1, NULL, NULL, 0, 1);
 REPLACE INTO `tb_course_tag` VALUES ('998', '998', '1000', '2020-5-16 18:12:08', 1, NULL, NULL, 0);
 
-REPLACE INTO `tb_course_chapter` VALUES ('99982', '概论', '', '1', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99982/绪论_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99983', '统计决策方法', '', '2', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99983/统计决策方法_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99984', '概率密度函数的估计', '', '998', '10', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99984/概率密度函数的估计_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99985', '线性分类器', '', '4', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99985/线性分类器_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99986', '非线性分类器', '', '5', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99986/非线性判别函数_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99987', '近邻法', '', '6', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99987/近邻法_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99988', '特征选择', '', '7', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null ,'/download/pdf/99988/特征选择_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99989', '特征提取', '', '8', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99989/特征提取_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99990', '非监督模式识别', '', '9', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99990/非监督模式识别_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99982', '概论', '', '1', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/绪论_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99983', '统计决策方法', '', '2', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/统计决策方法_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99984', '概率密度函数的估计', '', '998', '10', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/概率密度函数的估计_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99985', '线性分类器', '', '4', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/线性分类器_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99986', '非线性分类器', '', '5', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/非线性判别函数_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99987', '近邻法', '', '6', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/近邻法_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99988', '特征选择', '', '7', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null ,'/download/pdf/998/特征选择_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99989', '特征提取', '', '8', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/特征提取_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99990', '非监督模式识别', '', '9', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/非监督模式识别_encrypt.pdf');
 
 REPLACE INTO `tb_course_chapter_note` VALUES ('99921', '模式与模式识别的基本概念', '', null, null, '1', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');
 REPLACE INTO `tb_course_chapter_note` VALUES ('99922', '监督模式识别与非监督模式识别', '', null, null, '2', '99982', '2019-05-11 09:00:00', "-1", null, null, '0');

@@ -4,13 +4,13 @@ REPLACE INTO `tb_course` VALUES ('1000', '机器学习基础', '001008', '0', '�
 REPLACE INTO `tb_tag` VALUES ('1000', '人工智能', NULL, '2020-5-16 16:53:24', 1, NULL, NULL, 0, 1);
 REPLACE INTO `tb_course_tag` VALUES ('1000', '1000', '1000', '2020-5-16 18:12:08', 1, NULL, NULL, 0);
 
-REPLACE INTO `tb_course_chapter` VALUES ('99994', '绪论', '', '1', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99994/机器学习-1-绪论_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99995', '线性模型', '', '2', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99995/机器学习-2-线性模型_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99996', '决策树', '', '3', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99996/机器学习-3-决策树_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99994', '绪论', '', '1', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-1-绪论_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99995', '线性模型', '', '2', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-2-线性模型_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99996', '决策树', '', '3', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-3-决策树_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99997', '神经网络学习', '', '4', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, null);
-REPLACE INTO `tb_course_chapter` VALUES ('99998', '支持向量机', '', '5', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99998/机器学习-4-支持向量机_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99999', 'Bayes学习方法', '', '6', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/99999/机器学习-5-Bayes分类器_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('100000', '图模型简介', '', '7', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/100000/机器学习-6-HMM模型_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99998', '支持向量机', '', '5', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-4-支持向量机_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99999', 'Bayes学习方法', '', '6', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-5-Bayes分类器_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('100000', '图模型简介', '', '7', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-6-HMM模型_encrypt.pdf');
 
 
 REPLACE INTO `tb_course_chapter_note` VALUES ('99975', '机器学习的一般原理及相关概念', '', null, null, '1', '99994', '2019-05-11 09:00:00', "-1", null, null, '0');
