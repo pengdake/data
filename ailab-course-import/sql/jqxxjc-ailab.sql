@@ -7,10 +7,10 @@ REPLACE INTO `tb_course_tag` VALUES ('1000', '1000', '1000', '2020-5-16 18:12:08
 REPLACE INTO `tb_course_chapter` VALUES ('99994', '绪论', '', '1', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-1-绪论_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99995', '线性模型', '', '2', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-2-线性模型_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99996', '决策树', '', '3', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-3-决策树_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99997', '神经网络学习', '', '4', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, null);
-REPLACE INTO `tb_course_chapter` VALUES ('99998', '支持向量机', '', '5', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-4-支持向量机_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99999', 'Bayes学习方法', '', '6', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-5-Bayes分类器_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('100000', '图模型简介', '', '7', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-6-HMM模型_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99997', '神经网络学习', '', '7', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, null);
+REPLACE INTO `tb_course_chapter` VALUES ('99998', '支持向量机', '', '4', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-4-支持向量机_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99999', 'Bayes学习方法', '', '5', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-5-Bayes分类器_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('100000', '图模型简介', '', '6', '1000', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/1000/机器学习-6-HMM模型_encrypt.pdf');
 
 
 REPLACE INTO `tb_course_chapter_note` VALUES ('99975', '机器学习的一般原理及相关概念', '', null, null, '1', '99994', '2019-05-11 09:00:00', "-1", null, null, '0');
@@ -45,10 +45,10 @@ REPLACE INTO `tb_course_chapter_note` VALUES ('100000', 'Bayesian网络简介', 
 
 
 
-REPLACE INTO `tb_labconfig` (`labcfg_id`, `labcfg_name`, `labcfg_desc`, `labcfg_type`, `labcfg_value`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('1000', '内置实验配置-容器', '内置实验配置-容器', '1', '{"dockercfg":{"image":"__IMG_UUID__","ps":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0},"engine":"Tensorflow","session":{"flavor":{"memory":1,"cpu":1,"gpu":0,"group":""},"nodetype":"kvm-virtual-machine","num":1,"computeUnit":"CPU"},"datasize":1,"engineversion":"1.12.0","worker":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0}}}', '2020-05-18 11:03:35', '0', NULL, NULL, '0');
+REPLACE INTO `tb_labconfig` (`labcfg_id`, `labcfg_name`, `labcfg_desc`, `labcfg_type`, `labcfg_value`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('1000', '内置实验配置-容器-机器学习基础-1C1G', '内置实验配置-容器', '1', '{"dockercfg":{"image":"__IMG_UUID__","ps":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0},"engine":"Tensorflow","session":{"flavor":{"memory":1,"cpu":1,"gpu":0,"group":""},"nodetype":"kvm-virtual-machine","num":1,"computeUnit":"CPU"},"datasize":1,"engineversion":"1.12.0","worker":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0}}}', '2020-05-18 11:03:35', '0', NULL, NULL, '0');
 
 
-REPLACE INTO `tb_labconfig` (`labcfg_id`, `labcfg_name`, `labcfg_desc`, `labcfg_type`, `labcfg_value`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('999', '内置实验配置-容器', '内置实验配置-容器', '1', '{"dockercfg":{"image":"__IMG_UUID__","ps":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0},"engine":"Tensorflow","session":{"flavor":{"memory":4,"cpu":2,"gpu":1,"group":""},"nodetype":"kvm-virtual-machine","num":1,"computeUnit":"CPU"},"datasize":1,"engineversion":"1.12.0","worker":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0}}}', '2020-05-18 11:03:35', '0', NULL, NULL, '0');
+REPLACE INTO `tb_labconfig` (`labcfg_id`, `labcfg_name`, `labcfg_desc`, `labcfg_type`, `labcfg_value`, `create_time`, `create_id`, `update_time`, `update_id`, `is_del`) VALUES ('999', '内置实验配置-容器-机器学习基础-2C4G1GPU', '内置实验配置-容器', '1', '{"dockercfg":{"image":"__IMG_UUID__","ps":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0},"engine":"Tensorflow","session":{"flavor":{"memory":4,"cpu":2,"gpu":1,"group":""},"nodetype":"kvm-virtual-machine","num":1,"computeUnit":"CPU"},"datasize":1,"engineversion":"1.12.0","worker":{"flavor":{"memory":0,"cpu":0,"gpu":0,"group":""},"nodetype":"","num":0}}}', '2020-05-18 11:03:35', '0', NULL, NULL, '0');
 
 
 
