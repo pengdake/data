@@ -5,7 +5,7 @@ REPLACE INTO `tb_course_tag` VALUES ('998', '998', '1000', '2020-5-16 18:12:08',
 
 REPLACE INTO `tb_course_chapter` VALUES ('99982', '概论', '', '1', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/绪论_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99983', '统计决策方法', '', '2', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/统计决策方法_encrypt.pdf');
-REPLACE INTO `tb_course_chapter` VALUES ('99984', '概率密度函数的估计', '3', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/概率密度函数的估计_encrypt.pdf');
+REPLACE INTO `tb_course_chapter` VALUES ('99984', '概率密度函数的估计', '', '3', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/概率密度函数的估计_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99985', '线性分类器', '', '4', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/线性分类器_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99986', '非线性分类器', '', '5', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/非线性判别函数_encrypt.pdf');
 REPLACE INTO `tb_course_chapter` VALUES ('99987', '近邻法', '', '6', '998', '2019-05-11 09:00:00', "-1", null, null, '0', null, '/download/pdf/998/近邻法_encrypt.pdf');
