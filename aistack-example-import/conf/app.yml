@@ -19,7 +19,7 @@ face_classification:
     description: "情绪检测算法"
     size: 1
     hyperparameter:
-      dataset: "/root/dataset/dataset-face-class"
+      dataset: "/root/dataset/face-class"
       epoch: 1
       batch_size: 32
 mtcnn:
@@ -45,10 +45,10 @@ mtcnn:
     size: 1
     hyperparameter:
       epoch: 1
-      resize_dataset: "/root/dataset/dataset-mtcnn-pre"
+      resize_dataset: "/root/dataset/mtcnn-pre"
       batch_size: 384
       lr: 0.001
-      dataset: "/root/dataset/dataset-mtcnn"
+      dataset: "/root/dataset/mtcnn"
 facenet:
   id: 003
   dir: facenet
@@ -76,8 +76,8 @@ facenet:
       MAX_NROF_EPOCHS: 1
       LEARNING_RATE: "-1"
       EPOCH_SIZE: 1
-      DATASET_PATH: "/root/dataset/dataset-casia-maxpy-mtcnnpy/casia_maxpy_mtcnnpy_182/"
-      LFW_DATASET_DIR: "/root/dataset/dataset-lfw-mtcnnalign/lfw_mtcnnalign_160/"
+      DATASET_PATH: "/root/dataset/casia-maxpy-mtcnnpy/casia_maxpy_mtcnnpy_182/"
+      LFW_DATASET_DIR: "/root/dataset/lfw-mtcnnalign/lfw_mtcnnalign_160/"
 crnn_chinese_characters_rec:
   id: 004
   dir: crnn_chinese_characters_rec
@@ -99,7 +99,7 @@ crnn_chinese_characters_rec:
     description: "文本识别算法"
     size: 1
     hyperparameter:
-      DATASET: "/root/dataset/dataset-crnn-dataset"
+      DATASET: "/root/dataset/crnn-dataset"
       LR: 0.0001
       EPOCHS: 1
       BATCH_SIZE: 64
@@ -125,7 +125,7 @@ TTS:
     description: "语音合成算法"
     size: 1
     hyperparameter:
-      DATASET_PATH: "/root/dataset/dataset-ljspeech-pre/pre-LJSpeech-1.1-mini/"
+      DATASET_PATH: "/root/dataset/ljspeech-pre/pre-LJSpeech-1.1-mini/"
       EPOCHS: 1
       LR: 0.0001
       BATCH_SIZE: 1
@@ -151,7 +151,7 @@ stackgan:
     description: "图像绘制算法"
     size: 1
     hyperparameter:
-      DATASET_PATH: "/root/dataset/dataset-flowers"
+      DATASET_PATH: "/root/dataset/flowers"
       BATCH_SIZE: 64
       STAGEI_EPOCH: 100
       STAGEII_EPOCH: 200
@@ -176,7 +176,7 @@ mmdetection:
     description: "目标检测算法"
     size: 1
     hyperparameter:
-      DATASET_PATH: "/root/dataset/dataset-coco"
+      DATASET_PATH: "/root/dataset/coco"
       LEARNING_RATE: 0.02
       EPOCHS: 12
       BATCH_SIZE: 2
@@ -201,7 +201,7 @@ deepspeech:
     description: "语音识别算法"
     size: 1
     hyperparameter:
-      DATASET_PATH: "/root/dataset/dataset-cv2"
+      DATASET_PATH: "/root/dataset/cv2"
       EPOCHS: 75
       TRAIN_BATCH_SIZE: 1
       LEARNING_RATE: 0.001
@@ -226,7 +226,7 @@ ccpd:
     description: "车牌识别算法"
     size: 1
     hyperparameter:
-      DATA_SET: "/root/dataset/dataset-cp"
+      DATA_SET: "/root/dataset/cp"
       BATCH_SIZE: 16
       EPOCH: 3
 faster_rcnn:
@@ -250,7 +250,7 @@ faster_rcnn:
     description: "动态目标检测算法"
     size: 1
     hyperparameter:
-      DATASET: "/root/dataset/dataset-vocdevkit2007"
+      DATASET: "/root/dataset/vocdevkit2007"
       LR: 0.0004
       EPOCHS: 1
 mnist:
@@ -274,7 +274,7 @@ mnist:
     description: "数字识别算法"
     size: 1
     hyperparameter:
-      DATASET_PATH: "/root/dataset/dataset-mnist/"
+      DATASET_PATH: "/root/dataset/mnist/"
       TRAINING_EPOCH: 1
       BATCH_SIZE: 128
       LEARNING_RATE: 0.001

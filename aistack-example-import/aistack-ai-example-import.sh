@@ -88,7 +88,7 @@ for APP in  ${__};do
     echo "Create model bucket"   
     curl -X POST ${AISTACK_URL}/resource-manager/v1/model -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"modelDesc\": \"${!MD}\",\"modelId\": \"${!ID}\",\"modelName\": \"${!MN}\",\"modelSource\": 0,\"modelVersion\":\"1.0\"}"
     bucket_name="model-${!ID}"
-    s3cmd put ${APP_FULLPATH}/model/* --recursive  --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+    s3cmd put ${APP_FULLPATH}/model/* --recursive  --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/1.0/
 
     # Updating database script for super_param
     for CH in ${!CHL};do
