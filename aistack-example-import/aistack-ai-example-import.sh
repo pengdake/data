@@ -61,6 +61,7 @@ for APP in  ${__};do
     CHL=${APP}_code_hyperparameter_
 
     APP_FULLPATH="$(pwd)/${!DIR}"
+    CURRENT_PATH="$(pwd)"
 
     echo "Importing: $n $APP..."
     start=$SECONDS
@@ -72,17 +73,29 @@ for APP in  ${__};do
         if [[ ${!DSN} == *-pre ]]; then
             DSP="pre-dataset"
         fi
-        curl -X POST ${AISTACK_URL}/resource-manager/v1/datasets -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d '{"datasetDesc": "${!MD}","datasetId": "${!DSN}","datasetName": "${!DSN}","publicDataset": 1}'  
+        curl -X POST ${AISTACK_URL}/resource-manager/v1/datasets -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"datasetDesc\": \"${!MD}\",\"datasetId\": \"${!DSN}\",\"datasetName\": \"${!DSN}\",\"publicDataset\": 1}"
         bucket_name="dataset-${!DSN}"
-        s3cmd put ${APP_FULLPATH}/dataset/${!DSN}/* --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+        cd ${APP_FULLPATH}/${DSP}/${!DSN}
+        mkdir tmp && ${!DSC} tmp
+        cd ${CURRENT_PATH}
+        s3cmd put ${APP_FULLPATH}/${DSP}/${!DSN}/tmp/* --recursive --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+    done
     echo "Create code bucket"   
-    curl -X POST ${AISTACK_URL}/resource-manager/v1/algorithm -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d '{"algDesc": "${!CD}","algId": "${!ID}","algName": "{!CN}","publicAlg": 1}'
+    curl -X POST ${AISTACK_URL}/resource-manager/v1/algorithm -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"algDesc\": \"${!CD}\",\"algId\": \"${!ID}\",\"algName\": \"${!CN}\",\"publicAlg\": 1}"
     bucket_name="code-${!ID}"
-    s3cmd put ${APP_FULLPATH}/code/${!CN}/* --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+    echo "${APP_FULLPATH}/code/${!CN}"
+    s3cmd put ${APP_FULLPATH}/code/* --recursive  --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
     echo "Create model bucket"   
-    curl -X POST ${AISTACK_URL}/resource-manager/v1/model -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d '{"modelDesc": "${!MD}","modelId": "${!ID}","modelName": "${!MN}","modelSource": 0,"modelVersion":"1.0"}'
+    curl -X POST ${AISTACK_URL}/resource-manager/v1/model -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"modelDesc\": \"${!MD}\",\"modelId\": \"${!ID}\",\"modelName\": \"${!MN}\",\"modelSource\": 0,\"modelVersion\":\"1.0\"}"
     bucket_name="model-${!ID}"
-    s3cmd put ${APP_FULLPATH}/model/${!MN}/* --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+    s3cmd put ${APP_FULLPATH}/model/* --recursive  --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+
+    # Updating database script for super_param
+    for CH in ${!CHL};do
+    cat >> /tmp/aistack.sql << EOF
+REPLACE INTO \`tb_super_param\` ( \`key\`, \`value\`, \`create_time\`, \`alg_id\`) VALUES ('${CH#"$CHL"}', '${!CH}', now(), '${!ID}');
+EOF
+    done
 
     echo "Uploading image..."
     if [ ${!IMC} == "yes" ]
@@ -130,3 +143,4 @@ EOF
     echo "$APP: import finished after ${duration}s"
     n=$[n + 1]
 done
+
