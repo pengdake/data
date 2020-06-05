@@ -8,7 +8,7 @@ face_classification:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: "face-class", size: 2, cmd: "tar -xzvf face-class.tar.gz"}
+    -  { name: "face-class", size: 2, cmd: "tar -xzvf face-class.tar.gz -C"}
   model:
     name: "情感分析"
     description: "可对人物面部情感进行提取和分析，适用于情感分类等场景"
@@ -32,8 +32,8 @@ mtcnn:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: mtcnn, size: 2, cmd: "tar -xzvf mtcnn-dataset.tar.gz"}
-    -  { name: mtcnn-pre, size: 15, cmd: "tar -xzvf mtcnn-resize-dataset.tar.gz"}
+    -  { name: mtcnn, size: 2, cmd: "tar -xzvf mtcnn-dataset.tar.gz -C"}
+    -  { name: mtcnn-pre, size: 15, cmd: "tar -xzvf mtcnn-resize-dataset.tar.gz -C"}
   model:
     name: "人脸检测"
     description: "对复杂条件下的静态图片进行人脸检测，可准确识别出图片中的人脸位置"
@@ -59,10 +59,10 @@ facenet:
     gpu: yes
     distributed: 1
   dataset:
-    -  { name: lfw, size: 1, cmd: "unzip lfw.zip"}
-    -  { name: lfw-mtcnnalign, size: 1, cmd: "unzip lfw_mtcnnalign_160.zip"}
-    -  { name: casia-maxpy-mtcnnpy, size: 6, cmd: "unzip casia_maxpy_mtcnnpy_182.zip"}
-    -  { name: casia-maxpy-clean, size: 2, cmd: "unzip casia_maxpy_clean.zip"}
+    -  { name: lfw, size: 1, cmd: "unzip lfw.zip -d"}
+    -  { name: lfw-mtcnnalign, size: 1, cmd: "unzip lfw_mtcnnalign_160.zip -d"}
+    -  { name: casia-maxpy-mtcnnpy, size: 6, cmd: "unzip casia_maxpy_mtcnnpy_182.zip -d"}
+    -  { name: casia-maxpy-clean, size: 2, cmd: "unzip casia_maxpy_clean.zip -d"}
   model:
     name: "人脸识别"
     description: "利用深度学习技术，识别出图片中的人物身份，可应用于身份验证等场景"
@@ -88,7 +88,7 @@ crnn_chinese_characters_rec:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: crnn-dataset, size: 2, cmd: "tar xf crnn-dataset.tar"}
+    -  { name: crnn-dataset, size: 2, cmd: "tar xvf crnn-dataset.tar -C"}
   model:
     name: "文本识别"
     description: "利用光学字符识别技术，将图片上的文字内容，直接转换为可编辑文本。支持多场景、高精度的文字检测和识别"
@@ -113,8 +113,8 @@ TTS:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: ljspeech, size: 2, cmd: "tar -xjf LJSpeech-1.1-mini.tar.bz2"}
-    -  { name: ljspeech-pre, size: 2, cmd: "tar -xjf pre-LJSpeech-1.1-mini.tar.bz2"}
+    -  { name: ljspeech, size: 2, cmd: "tar -xjf LJSpeech-1.1-mini.tar.bz2 -C"}
+    -  { name: ljspeech-pre, size: 2, cmd: "tar -xjf pre-LJSpeech-1.1-mini.tar.bz2 -C"}
   model:
     name: "语音合成"
     description: "语音合成技术可以将用户输入的文字，转换成流畅自然的语音输出，可应用于各类机器人发声的场景"
@@ -140,7 +140,7 @@ stackgan:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: flowers, size: 2, cmd: "tar -zxvf flowers.tar.gz"}
+    -  { name: flowers, size: 2, cmd: "tar -zxvf flowers.tar.gz -C"}
   model:
     name: "智能绘制"
     description: "根据文本中描述的内容进行图像绘制，可形象生动的绘制文字所描述的图像内容"
@@ -165,7 +165,7 @@ mmdetection:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: coco, size: 3, cmd: "unzip coco.zip"}
+    -  { name: coco, size: 3, cmd: "unzip coco.zip -d"}
   model:
     name: "多目标检测"
     description: "多目标检测技术可以同时定位图片中的多个物体，适用于多目标同时查找、识别的场景"
@@ -190,7 +190,7 @@ deepspeech:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: cv2, size: 5, cmd: "unzip cv2.zip"}
+    -  { name: cv2, size: 5, cmd: "unzip cv2.zip -d"}
   model:
     name: "语音识别"
     description: "语音识别技术科将语音转写成文字，适用于会务、演讲授课等场景"
@@ -215,7 +215,7 @@ ccpd:
     gpu: no
     distributed: 0
   dataset:
-    -  { name: cp, size: 1, cmd: "tar -zxvf cp.tar.gz"}
+    -  { name: cp, size: 1, cmd: "tar -zxvf cp.tar.gz -C"}
   model:
     name: "车牌识别"
     description: "可自动定位车牌区域，准确率高，识别速度快，识别结果稳定"
@@ -239,7 +239,7 @@ faster_rcnn:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: vocdevkit2007, size: 2, cmd: "tar xf VOCdevkit2007.tar.gz"}
+    -  { name: vocdevkit2007, size: 2, cmd: "tar xf VOCdevkit2007.tar.gz -C"}
   model:
     name: "动态目标检测"
     description: "可定位并标记图片中的目标，适用于物体分类等场景"
@@ -263,7 +263,7 @@ mnist:
     gpu: yes
     distributed: 0
   dataset:
-    -  { name: mnist, size: 1, cmd: "unzip ds-mnist.zip"}
+    -  { name: mnist, size: 1, cmd: "unzip ds-mnist.zip -d"}
   model:
     name: "数字识别"
     description: "可识别手写数字，适用于手写内容自动化整理等场景"

@@ -73,12 +73,14 @@ for APP in  ${__};do
         if [[ ${!DSN} == *-pre ]]; then
             DSP="pre-dataset"
         fi
-        curl -X POST ${AISTACK_URL}/resource-manager/v1/datasets -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"datasetDesc\": \"${!MD}\",\"datasetId\": \"${!DSN}\",\"datasetName\": \"${!DSN}\",\"publicDataset\": 1}"
-        bucket_name="dataset-${!DSN}"
+        datasetId=${!DSN/-/}
+        curl -X POST ${AISTACK_URL}/resource-manager/v1/datasets -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"datasetDesc\": \"${!MD}\",\"datasetId\": \"${datasetId}\",\"datasetName\": \"${!DSN}\",\"publicDataset\": 1}"
+        bucket_name="dataset-${datasetId}"
         cd ${APP_FULLPATH}/${DSP}/${!DSN}
         mkdir tmp && ${!DSC} tmp
         cd ${CURRENT_PATH}
         s3cmd put ${APP_FULLPATH}/${DSP}/${!DSN}/tmp/* --recursive --no-ssl --host=${AWS_HOST} --host-bucket= s3://${bucket_name}/
+        rm -rf ${APP_FULLPATH}/${DSP}/${!DSN}/tmp
     done
     echo "Create code bucket"   
     curl -X POST ${AISTACK_URL}/resource-manager/v1/algorithm -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"algDesc\": \"${!CD}\",\"algId\": \"${!ID}\",\"algName\": \"${!CN}\",\"publicAlg\": 1}"
