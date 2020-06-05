@@ -266,19 +266,43 @@ Switch Account
     Input Password    ${password}
     Submit Login_data  ${user}
 
-Clean Environment
+Clean Lesson
     click element  xpath=//span[text()="实验管理"]
-    wait until page contains element  xpath=//span[text()="实验作业"]
-    click element  xpath=//span[text()="实验作业"]
-    wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
-    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
-    wait until page contains element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
-    click element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
-    wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
-    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
+    #wait until page contains element  xpath=//span[text()="实验作业"]
+    #click element  xpath=//span[text()="实验作业"]
+    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
+    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
+    #wait until page contains element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
+    #click element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
+    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
+    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
+    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
+    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
+    #wait until page contains element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
+    #click element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
+    wait until page contains element  xpath=//span[text()="实验维护"]
+    click element  xpath=//span[text()="实验维护"]
+    wait until page contains element  xpath=h5[text()="${LAB_NAME}"]
+    mouse over  xpath=h5[text()="${LAB_NAME}"]
+    wait until page contains element    xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="删除"]
+    click element  xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="删除"]
+    wait until page contains element  xpath=//span[text()="您确定要删除该实验吗？"]/../..//button[text()="确定"]
+    click element  xpath=//span[text()="您确定要删除该实验吗？"]/../..//button[text()="确定"]
+    wait until page does not contain element  xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="删除"]
+    wait until page contains element  xpath=//span[text()="回收站"]
+    click element  xpath=//span[text()="回收站"]
+    mouse over  xpath=h5[text()="${LAB_NAME}"]
+    wait until page contains element    xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="彻底删除"]
+    click element  xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="彻底删除"]
+    wait until page contains element  xpath=//span[text()="您确定要彻底删除该实验吗？一旦删除后将无法恢复"]/../..//button[text()="确定"]
+    click element  xpath=//span[text()="您确定要彻底删除该实验吗？一旦删除后将无法恢复"]/../..//button[text()="确定"]
+    wait until page does not contain element  xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="彻底删除"]
+    switch role  教师  系统管理员
+    wait until page contains element  xpath=//span[text()="系统管理"]
+    click element  xpath=//span[text()="系统管理"]
+    wait until page contains element  xpath=//span[text()="组织机构管理"]
+    click element  xpath=//span[text()="组织机构管理"]
+       
+    
+    
 
-
-    wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
-    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
-    wait until page contains element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
-    click element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
