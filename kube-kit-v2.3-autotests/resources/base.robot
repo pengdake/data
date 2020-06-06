@@ -9,26 +9,29 @@ ${CHROME_OPTIONS}    add_argument("--headless"); add_argument("--no-sandbox"); a
 ${ADMIN_USER}   awcloudTestAdmin
 ${ADMIN_PASSWORD}    Awcloud!23
 
-${STUDENT_ID}    1000xxxxxxx
-${STUDENT_NAME}  autotest
+${ID_PRE}    1000xxx
+${NAME_PRE}  auto
+
+${STUDENT_ID}    ${ID_PRE}xxxx
+${STUDENT_NAME}  ${NAME_PRE}test
 ${STUDENT_PASSWORD}   Awcloud!23
 ${STUDENT_OLD_PASSWORD}  test
 
-${COLLEGE_ID}      1000xxx
-${COLLEGE_NAME}    autotestx
-${DEPARTMENT_ID}   1000xxxx
-${DEPARTMENT_NAME}  autotestxx
-${SPECIALTY_ID}    1000xxxxx
-${SPECIALTY_NAME}   autotestxxx
-${CLASS_ID}      1000xxxxxx
-${CLASS_NAME}    autotestxxxx
-${LESSON_NAME}   autotest_lesson
+${COLLEGE_ID}      ${ID_PRE}
+${COLLEGE_NAME}    ${NAME_PRE}testx
+${DEPARTMENT_ID}   ${ID_PRE}x
+${DEPARTMENT_NAME}  ${NAME_PRE}testxx
+${SPECIALTY_ID}    ${ID_PRE}xx
+${SPECIALTY_NAME}   ${NAME_PRE}testxxx
+${CLASS_ID}      ${ID_PRE}xxx
+${CLASS_NAME}    ${NAME_PRE}testxxxx
 
+${LESSON_NAME}   ${NAME_PRE}test_lesson
 ${LESSON_GROUP}  2020
-${LAB_CONF_NAME}    autotest_lab_conf
+${LAB_CONF_NAME}    ${NAME_PRE}test_lab_conf
 ${LAB_CONF_IMG}  tensorflow-cpu-course
-${LAB_NAME}    autotest_lab
-${LAB_WORK_NAME}  autotest_lab_work
+${LAB_NAME}    ${NAME_PRE}test_lab
+${LAB_WORK_NAME}  ${NAME_PRE}test_lab_work
 
 ${COLLEGE_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_college.xlsx
 ${STUDENT_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_student.xlsx
