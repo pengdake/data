@@ -85,9 +85,9 @@ Prepare Colledge Info
     wait until page contains element  xpath=//span[text()="导入"]
     click element  xpath=//span[text()="导入"]
     wait until page contains element  xpath=//span[text()="选择文件"]
-    click element  xpath=//span[text()="选择文件"]
-    wait until page contains element  name=templateName
-    choose file    name=templateName    ${COLLEGE_FILE}
+    #click element  xpath=//span[text()="选择文件"]
+    #wait until page contains element  name=templateName
+    choose file    xpath=//span[text()="选择文件"]    ${COLLEGE_FILE}
     sleep  5
     click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[5]/div/div[3]/div/button[1]
     wait until page contains element  xpath=//span[text()="${COLLEGE_NAME}"]
