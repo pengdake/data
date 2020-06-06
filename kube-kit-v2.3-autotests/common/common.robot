@@ -298,11 +298,80 @@ Clean Lesson
     click element  xpath=//span[text()="您确定要彻底删除该实验吗？一旦删除后将无法恢复"]/../..//button[text()="确定"]
     wait until page does not contain element  xpath=//h5[text()="${LAB_NAME}"]/..//span[text()="彻底删除"]
     switch role  教师  系统管理员
+    #删除学生
     wait until page contains element  xpath=//span[text()="系统管理"]
     click element  xpath=//span[text()="系统管理"]
+    wait until page contains element  xpath=//span[text()="用户管理"]
+    click element  xpath=//span[text()="用户管理"]
+    wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span
+    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span
+    wait until element is enabled  xpath=//button[contains(text(), "禁用")]
+    click element  xpath=//button[contains(text(), "禁用")]
+    wait until page contains element  xpath=//span[text()="您确定要禁用所选用户吗?"]/../..//button[text()="确定"]
+    click element  xpath=//span[text()="您确定要禁用所选用户吗?"]/../..//button[text()="确定"]
+    wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span
+    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[1]/div/label/span/span
+    click element  xpath=//button[contains(text(),"更多操作")]
+    wait until page contains element  xpath=//span[text()="删除"]
+    click element  xpath=//span[text()="删除"]
+    
+    
+    #删除组织机构
     wait until page contains element  xpath=//span[text()="组织机构管理"]
     click element  xpath=//span[text()="组织机构管理"]
+    #删除班级
+    wait until page contains element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${CLASS_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${CLASS_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${CLASS_NAME}")]/../..//button[2]//i
+    click element    xpath=//span/span[contains(text(), "${CLASS_NAME}")]/../..//button[2]//i
+
+    wait until page contains element  xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    click element    xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
        
-    
-    
+    #删除专业
+    wait until page contains element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../..//button[2]//i
+    click element    xpath=//span/span[contains(text(), "${SPECIALTY_NAME}")]/../..//button[2]//i
+
+    wait until page contains element  xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    click element    xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    #删除科系
+    wait until page contains element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../..//button[2]//i
+    click element    xpath=//span/span[contains(text(), "${DEPARTMENT_NAME}")]/../..//button[2]//i
+
+    wait until page contains element  xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    click element    xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    #删除学院
+    wait until page contains element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+    click element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../../span
+
+    wait until page contains element  xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../..//button[2]//i
+    click element    xpath=//span/span[contains(text(), "${COLLEGE_NAME}")]/../..//button[2]//i
+
+    wait until page contains element  xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
+    click element    xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
 
