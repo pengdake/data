@@ -30,6 +30,6 @@ ${LAB_CONF_IMG}  tensorflow-cpu-course
 ${LAB_NAME}    autotest_lab
 ${LAB_WORK_NAME}  autotest_lab_work
 
-${COLLEGE_FILE}   /home/autotest/ai/autotest_college.xlsx
-${STUDENT_FILE}   /home/autotest/ai/autotest_student.xlsx
-${LAB_GUIDE}     /home/autotest/ai/autotest.pdf
+${COLLEGE_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_college.xlsx
+${STUDENT_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_student.xlsx
+${LAB_GUIDE}     /home/autotest/kube-kit-v2.3-autotests/autotest.pdf
