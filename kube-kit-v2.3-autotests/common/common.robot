@@ -48,19 +48,18 @@ Submit Login_data
     click element  xpath=//span[text()="换一张"]
     sleep  3
     #pdk
-    ${filename}  EVALUATE  random.randint(1,300)  random
     #插入验证码
-    capture element screenshot  id=codeImg   filename=${filename}.png
+    capture element screenshot  id=codeImg   filename=code.png
+    sleep  3
     # pdk
-    ${code}  EVALUATE  tesserocr.file_to_text('/var/www/html/${filename}.png').replace(" ","")  tesserocr
+    ${code}  EVALUATE  tesserocr.file_to_text('/var/www/html/code.png').replace(" ","")  tesserocr
     input text    name=code   ${code}
-    Click Button    css=[type="submit"].btn-primary
+    sleep  1
+    #click element   xpath=//button[contains(text(), "登录")]
     #等待界面响应
-    #Wait Until Page Contains Element     css=.user-mes-box.clearfix>li:nth-child(2) span
     #pdk
     sleep  30
     #检查是否登录成功(检验用户名)
-    #${res}  run keyword and return status  Element Text Should Be          css=.user-mes-box.clearfix>li:nth-child(2) span        ${user}
     ${res}  run keyword and return status  Page Should Contain Element          xpath=//span[text()="${user}"]
     #pdk 
     Run Keyword If  '${res}'=='False'    Submit Login_data  ${user}
@@ -81,13 +80,15 @@ Prepare Colledge Info
     sleep  3
     element should be visible  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
     click element  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
-    wait until page contains element  xpath=//span[text()="组织机构管理"]/..
-    click element  xpath=//span[text()="组织机构管理"]/..
+    wait until page contains element  xpath=//span[text()="组织机构管理"]
+    click element  xpath=//span[text()="组织机构管理"]  
     wait until page contains element  xpath=//span[text()="导入"]
     click element  xpath=//span[text()="导入"]
+    wait until page contains element  xpath=//span[text()="选择文件"]
+    click element  xpath=//span[text()="选择文件"]
     wait until page contains element  name=templateName
     choose file    name=templateName    ${COLLEGE_FILE}
-    sleep  1
+    sleep  5
     click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[5]/div/div[3]/div/button[1]
     wait until page contains element  xpath=//span[text()="${COLLEGE_NAME}"]
     #Prepare Student Info
