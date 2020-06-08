@@ -100,4 +100,3 @@ function parse_yaml {
       }
    }"
 }
-

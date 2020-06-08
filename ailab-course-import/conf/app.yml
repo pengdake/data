@@ -45,4 +45,3 @@ sztxcl:
     -  { name: dataset-expand }
     -  { name: dataset-image-cut }
     -  { name: dataset-image-design }
-
