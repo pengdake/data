@@ -1,7 +1,6 @@
 import openpyxl
 import uuid
 import os
-import commands
 import subprocess
 
 ID_PRE = str(uuid.uuid4()).split("-")[0]
