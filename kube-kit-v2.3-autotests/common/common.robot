@@ -47,21 +47,17 @@ Submit Login_data
     [Arguments]  ${user}
     click element  xpath=//span[text()="换一张"]
     sleep  3
-    #pdk
     #插入验证码
     capture element screenshot  id=codeImg   filename=code.png
     sleep  3
-    # pdk
     ${code}  EVALUATE  tesserocr.file_to_text('/var/www/html/code.png').replace(" ","")  tesserocr
     input text    name=code   ${code}
     sleep  1
     #click element   xpath=//button[contains(text(), "登录")]
     #等待界面响应
-    #pdk
     sleep  30
     #检查是否登录成功(检验用户名)
     ${res}  run keyword and return status  Page Should Contain Element          xpath=//span[text()="${user}"]
-    #pdk 
     Run Keyword If  '${res}'=='False'    Submit Login_data  ${user}
 
 #登录
@@ -72,39 +68,37 @@ Ailab Login
     Input Password    ${ADMIN_PASSWORD}
     Submit Login_data   ${ADMIN_USER}
 
+Import Org By Api
+    create session  ailab-import-org  ${BASE_URL}
+    ${files}  evaluate  {'file': open('${ORG_FILE}','rb')}
+    ${import_org_resp}=  post request  ailab-import-org  /ailab-manager/v1/orgs/template  files=${files}  headers=${HEADERS}
+    ${import_org_resp_json}=  to json  ${import_org_resp.text}
+    ${import_org_resp_code}=  set variable  ${import_org_resp_json['code']}
+    should be equal as strings  ${import_org_resp_code}  0
 
-Prepare Colledge Info
-    #Prepare Colledge Group Info
-    #pdk
+Import User By Api
+    create session  ailab-import-user  ${BASE_URL}
+    ${files}  evaluate  {'file': open('${USER_FILE}','rb')}
+    ${import_user_resp}=  post request  ailab-import-user  /ailab-manager/v1/users/template  files=${files}  headers=${HEADERS}
+    ${import_user_resp_json}=  to json  ${import_user_resp.text}
+    ${import_user_resp_code}=  set variable  ${import_user_resp_json['code']}
+    should be equal as strings  ${import_user_resp_code}  0
+
+Import Org And User
     wait until page contains element  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
     sleep  3
+    Ailab Api Auth
+    Import Org By Api
     element should be visible  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
     click element  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
     wait until page contains element  xpath=//span[text()="组织机构管理"]
     sleep  5
-    click element  xpath=//span[text()="组织机构管理"]  
+    click element  xpath=//span[text()="组织机构管理"]
     sleep  5
-    wait until page contains element  xpath=//span[text()="导入"]
-    click element  xpath=//span[text()="导入"]
-    wait until page contains element  xpath=//span[text()="选择文件"]
-    click element  xpath=//span[text()="选择文件"]
-    wait until page contains element  name=templateName
-    sleep  5
-    #choose file    xpath=//span[text()="选择文件"]    ${COLLEGE_FILE}
-    choose file    name=templateName    ${COLLEGE_FILE}
-    sleep  5
-    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[5]/div/div[3]/div/button[1]
     wait until page contains element  xpath=//span[text()="${COLLEGE_NAME}"]
-    #Prepare Student Info
+
+    Import User By Api
     click element  xpath=//span[text()="用户管理"]
-    wait until page contains element  xpath=//button[contains(text(), "更多操作")]
-    click element  xpath=//button[contains(text(), "更多操作")]
-    wait until page contains element  xpath=//span[text()="导入"]
-    click element  xpath=//span[text()="导入"]
-    wait until page contains element  name=templateName
-    choose file    name=templateName    ${STUDENT_FILE}
-    sleep  1
-    click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[8]/div/div[3]/div/button[1]
     wait until page contains element  //*[@id="app"]/div/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[2]/div/span[text()="${STUDENT_ID}"]
 
 Switch Role 
@@ -250,17 +244,6 @@ Run Lab work
     wait until page contains element  xpath=//button[contains(text(),"进入实验")]
     click element  xpath=//button[contains(text(),"进入实验")]
     wait until page contains element  xpath=//span[text()="开始实验"]
-    click element  xpath=//span[text()="开始实验"]
-    sleep  30
-    select window  title=开始实验
-    wait until page contains element  xpath=//div[text()="结束实验"]    timeout=300
-    sleep  7200
-    click element  xpath=//div[text()="结束实验"]
-    wait until page contains element  xpath=//*[@id="app"]/div/div[1]/div[4]/div/div[3]/div/button[1]
-    click element  xpath=//*[@id="app"]/div/div[1]/div[4]/div/div[3]/div/button[1]
-    wait until page contains element  xpath=//div[text()="已完成实验"]
-    click element  xpath=//div[text()="已完成实验"]
-    wait until page contains element  xpath=//span[text()="已完成"]
 
 Switch Account
     [Arguments]  ${user}  ${password}
@@ -273,18 +256,6 @@ Switch Account
 
 Clean Lesson
     click element  xpath=//span[text()="实验管理"]
-    #wait until page contains element  xpath=//span[text()="实验作业"]
-    #click element  xpath=//span[text()="实验作业"]
-    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
-    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/div/span
-    #wait until page contains element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
-    #click element  xpath=//body/ul[@class="el-dropdown-menu el-popper el-dropdown-menu--small"]/li[3]/div[text()="实验记录"]
-    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
-    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[7]/div[1]/div/div[2]/div/div[2]/div[3]/table/tbody/tr/td[1]/div/label/span/span
-    #wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
-    #click element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[2]/div[1]/div[4]/div[2]/table/tbody/tr/td[8]/div/button[2]
-    #wait until page contains element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
-    #click element  xpath=//span[text()="您确定要删除所选内容吗？"]/../../div[3]//button[text()="确定"]
     wait until page contains element  xpath=//span[text()="实验维护"]
     click element  xpath=//span[text()="实验维护"]
     wait until page contains element  xpath=h5[text()="${LAB_NAME}"]

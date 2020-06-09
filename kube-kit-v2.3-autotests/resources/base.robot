@@ -33,6 +33,6 @@ ${LAB_CONF_IMG}  tensorflow-cpu-course
 ${LAB_NAME}    ${NAME_PRE}test_lab
 ${LAB_WORK_NAME}  ${NAME_PRE}test_lab_work
 
-${COLLEGE_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_org.xlsx
-${STUDENT_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_user.xlsx
+${ORG_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_org.xlsx
+${USER_FILE}   /home/autotest/kube-kit-v2.3-autotests/autotest_user.xlsx
 ${LAB_GUIDE}     /home/autotest/kube-kit-v2.3-autotests/autotest.pdf
