@@ -52,13 +52,15 @@ def generate_excel(id_pre, name_pre):
 
 if __name__ == "__main__":
     VIP = os.getenv("VIP")
-    for i in range(3):
+    VIP = "10.1.0.200"
+    for i in range(1):
         ID_PRE = str(uuid.uuid4()).split("-")[0]
         NAME_PRE = str(uuid.uuid4()).split("-")[0]
         generate_excel(ID_PRE, NAME_PRE)
-        cmd = "su - autotest -c 'robot -v VIP:%s -v ID_PRE:%s -v NAME_PRE:%s   /home/autotest/kube-kit-v2.3-autotests/ailab.robot'" % (VIP, ID_PRE, NAME_PRE)
+        cmd = "su - autotest -c 'robot -v VIP:%s -v ID_PRE:%s -v NAME_PRE:%s -d /var/www/html/   /home/autotest/kube-kit-v2.3-autotests/ailab.robot'" % (VIP, ID_PRE, NAME_PRE)
         s, o = commands.getstatusoutput(cmd)
         if s:
+            print o
             continue
         else:
             break

@@ -84,6 +84,14 @@ Import User By Api
     ${import_user_resp_code}=  set variable  ${import_user_resp_json['code']}
     should be equal as strings  ${import_user_resp_code}  0
 
+Switch Admin Role By Api
+    create session  ailab-role  ${BASE_URL}
+    ${data}=  evaluate  {'roleId': '1'}
+    ${resp}=  post request  ailab-role  /ailab-manager/v1/roles/currentRole  json=${data}  headers=${HEADERS}
+    ${resp_json}=  to json  ${resp.text}
+    ${resp_code}=  set variable  ${resp_json['code']}
+    should be equal as strings  ${resp_code}  0
+
 Import Org And User
     wait until page contains element  xpath=//span[text()="系统管理"]/../i[@class="el-submenu__icon-arrow el-icon-arrow-down"]
     sleep  3
@@ -96,6 +104,8 @@ Import Org And User
     click element  xpath=//span[text()="组织机构管理"]
     sleep  5
     wait until page contains element  xpath=//span[text()="${COLLEGE_NAME}"]
+
+    Switch Admin Role By Api
 
     Import User By Api
     click element  xpath=//span[text()="用户管理"]
@@ -117,8 +127,8 @@ Create Lesson
     click element  xpath=//button[text()="新建"]
     wait until page contains element  xpath=//div[contains(text(), "您的课程已经新建成功")]
     click element  xpath=//span[text()="课程维护"]
-    wait until page contains element  xpath=//p[text()="autotest_lesson"]
-    mouse over  xpath=//p[text()="autotest_lesson"]
+    wait until page contains element  xpath=//p[text()="${LESSON_NAME}"]
+    mouse over  xpath=//p[text()="LESSON_NAME"]
     wait until page contains element  xpath=//span[contains(text(), "发布")]
     click element  xpath=//span[contains(text(), "发布")]
     wait until page contains element  xpath=//*[@id="app"]/div/div[2]/div/div[2]/div[5]/div/div[3]/div/button[1]
