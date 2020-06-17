@@ -54,14 +54,7 @@ if __name__ == "__main__":
     VIP = os.getenv("VIP")
     ID_PRE = str(uuid.uuid4()).split("-")[0]
     NAME_PRE = str(uuid.uuid4()).split("-")[0]
-    MYSQL_DBHOST = os.getenv("MYSQL_DBHOST")
-    MYSQL_DBPORT = os.getenv("MYSQL_DBPORT")
-    MYSQL_AILAB_DBNAME = os.getenv("MYSQL_AILAB_DBNAME")
-    MYSQL_AILAB_DBUSER = os.getenv("MYSQL_AILAB_DBUSER")
-    MYSQL_AILAB_DBPASSWORD = os.getenv("MYSQL_AILAB_DBPASSWORD")
-    VERSION = os.getenv("VERSION")
-
     generate_excel(ID_PRE, NAME_PRE)
-    cmd = "su - autotest -c 'robot -v VIP:%s -v ID_PRE:%s -v NAME_PRE:%s -v MYSQL_DBHOST:%s -v MYSQL_DB_PORT:%s -v MYSQL_AILAB_DBNAME:%s -v MYSQL_AILAB_DBUSER:%s -v MYSQL_AILAB_DBPASSWORD:%s  /home/autotest/ai/ailab/%s/ailab.robot'" % (VIP, ID_PRE, NAME_PRE, MYSQL_DBHOST, MYSQL_DBPORT, MYSQL_AISTACK_DBNAME, MYSQL_AISTACK_DBUSER, MYSQL_AISTACK_DBPASSWORD, VERSION)
+    cmd = "su - autotest -c 'robot -v VIP:%s -v ID_PRE:%s -v NAME_PRE:%s   /home/autotest/kube-kit-v2.3-autotests/ailab.robot'" % (VIP, ID_PRE, NAME_PRE)
     s, o = commands.getstatusoutput(cmd)
     print o

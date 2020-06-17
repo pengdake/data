@@ -4,7 +4,6 @@ Resource          resources/base.robot
 Resource          common/common.robot
 *** Test Cases ***
 Lab Workflow Test
-    Create Ailab User By Sql
     Ailab Login
     Click Element    css=.menu-list>li:nth-child(3)
     ${teacher_status}  Run Keyword And Return Status  wait until page contains element  xpath=//span[text()="教师"]

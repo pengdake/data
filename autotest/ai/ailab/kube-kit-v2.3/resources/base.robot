@@ -13,9 +13,9 @@ ${ID_PRE}    1000xxx
 ${NAME_PRE}  auto
 
 ${STUDENT_ID}    ${ID_PRE}xxxx
-${STUDENT_NAME}  ${NAME_PRE}test
+${STUDENT_NAME}  ${NAME_PRE}testxxxxx
 ${STUDENT_PASSWORD}   Awcloud!23
-${STUDENT_OLD_PASSWORD}  test
+${STUDENT_OLD_PASSWORD}  xxxx
 
 ${COLLEGE_ID}      ${ID_PRE}
 ${COLLEGE_NAME}    ${NAME_PRE}testx

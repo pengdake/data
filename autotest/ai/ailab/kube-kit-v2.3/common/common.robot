@@ -1,23 +1,10 @@
 *** Settings ***
 Library           SeleniumLibrary
 Library           RequestsLibrary
-Library           DatabaseLibrary
 Library           Collections
 Resource          ../resources/base.robot
 
 *** Keywords ***
-Creat Aistack User By Sql
-    connect to database using custom params  pymysql  host='${MYSQL_DBHOST}',port='${MYSQL_DBPORT}',user='${MYSQL_AILAB_DBUSER}',password='${MYSQL_AILAB_DBPASSWORD}',database='${MYSQL_AILAB_DBNAME}'
-    execute sql string  replace into `pub_tb_user`(`org_id`,`user_code`,`login_name`,`password`,`user_name`,`status`,`user_type`,`reg_source`,`login_status`,`update_pwd`,`update_info`,`mobile`,`email`,`address`,`postal_code`,`fax`,`phone`,`qq`,`weixin`,`img`,`creater_id`,`reg_time`,`updater_id`,`update_time`) values (70,'00001','awcloudTestAdmin','29cafeb8a69096d0b6141e9918a308da','awcloudTestAdmin',1,1,2,'0','1','0','13345678910','78900912@qq.com',NULL,NULL,NULL,'18840911456',NULL,NULL,NULL,-1,'2020-06-15 11:27:14',1,'2020-06-10 18:04:27');
-    execute sql string  replace into `pub_tb_user_role`(user_id,role_id) VALUES ((SELECT user_id FROM pub_tb_user WHERE login_name = 'awcloudTestAdmin'),1) ,((SELECT user_id FROM pub_tb_user WHERE login_name = 'awcloudTestAdmin'),3);
-    disconnect from database
-
-Delete Aistack User By Sql
-    connect to database using custom params  pymysql  host='${MYSQL_DBHOST}',port='${MYSQL_DBPORT}',user='${MYSQL_AILAB_DBUSER}',password='${MYSQL_AILAB_DBPASSWORD}',database='${MYSQL_AILAB_DBNAME}'
-    execute sql string  DELETE FROM pub_tb_user_role WHERE user_id = (SELECT user_id FROM pub_tb_user WHERE login_name = 'awcloudTestAdmin');
-    execute sql string  DELETE FROM pub_tb_user WHERE login_name = "awcloudTestAdmin";
-    disconnect from database
-
 Ailab Api Auth
     Create Session    ailab    ${BASE_URL}
     ${code_resp}=    Get Request    ailab    /ailab-manager/v1/kaptcha/json
@@ -470,4 +457,3 @@ Clean Environment
     wait until page contains element  xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
     click element    xpath=//div[contains(text(),"确定要删除所选内容吗？")]/../../div[3]//button[text()="确定"]
 
-    delete ailab user by sql
