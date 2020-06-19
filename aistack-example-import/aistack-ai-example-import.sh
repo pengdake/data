@@ -73,7 +73,7 @@ for APP in  ${__};do
         if [[ ${!DSN} == *-pre ]]; then
             DSP="pre-dataset"
         fi
-        datasetId=${!DSN/-/}
+        datasetId=${!DSN//-/}
         curl -X POST ${AISTACK_URL}/resource-manager/v1/datasets -H 'Content-Type:application/json' -H 'project-name:admin' -H 'X-Access-Token:api-sdk'  -H 'X-Access-Source:SDK' -d "{\"datasetDesc\": \"${!MD}\",\"datasetId\": \"${datasetId}\",\"datasetName\": \"${!DSN}\",\"publicDataset\": 1}"
         bucket_name="dataset-${datasetId}"
         cd ${APP_FULLPATH}/${DSP}/${!DSN}
